@@ -29,8 +29,9 @@ function checkLocalStorage() {
 
     if (userNameitem.includes(userNameValues()) && passworditem.includes(passwordValues())) {
         console.log("exists");
-    } else {
         //makeLink();
+    } else {
+        
         console.log("doesnt exist");
         alert("user name does not exist, please sign in to continue.");
     }
@@ -51,7 +52,6 @@ function getPassword(item) {
 
 
 // function makeLink() {
-//     console.log(" in link");
 //     let a = document.createElement('a');
 //     console.log('a: ', a);
 //     a.href = "https://www.geeksforgeeks.org";
