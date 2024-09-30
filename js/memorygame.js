@@ -3,18 +3,24 @@ let counter=0;
 let lasttargetclass;
 
 //check for same class
-function checkfit(e){
+
+
+
+function checkfit(e){   
     if(e.target.getAttribute("class")===lasttargetclass){
         const elementsCollection=document.getElementsByClassName(lasttargetclass);
         const elementsArray=Array.from(elementsCollection);
-        elementsArray.forEach(element => {
-           element.style.display="none"; 
-        });
-        console.log(e);
-        console.log(lasttargetclass);
+        const myTimeout = setTimeout(sustain, 2000);
+        function sustain() {
+            elementsArray.forEach(element => {
+                element.style.display="none"; 
+             });
+            clearTimeout(myTimeout);
+        }
+        
     }else{
-        document.getElementsByClassName(lasttargetclass).style.backgroundColor="red";
-
+        document.getElementsByClassName(lasttargetclass).style.backgroundColor="grey";
+        
     }
 }
 //storage class and count clicks
@@ -27,6 +33,7 @@ function countClick(e){
     console.log(counter);
 } else{
         checkfit(e);
+        counter=0;
     }
 }
 //creates all the dives,gives them  class name and text content.

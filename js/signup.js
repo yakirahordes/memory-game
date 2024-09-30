@@ -1,3 +1,5 @@
+//-שולפים את הפורם מה
+//html
 const form = document.getElementById("my-form");
 
 
