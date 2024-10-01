@@ -52,8 +52,9 @@ function countClick(e) {
    }
 }
 //creates all the dives,gives them  class name and text content.
-const cardstext = []
+
 const section1CardsArr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+function createDiv () {
 for (let i = 0; i < section1CardsArr.length; i++) {
    const element = document.createElement('div');
    // element.textContent = section1CardsArr[i];
@@ -63,21 +64,42 @@ for (let i = 0; i < section1CardsArr.length; i++) {
    element.addEventListener("click", cardsColor);
    element.addEventListener("click", countClick);
 }
+}
 
 function cardsColor(e) {
-   
-
-   if (e.target.getAttribute("class") === "1") {
-      e.target.style.backgroundColor = "red";
-   } else if (e.target.getAttribute("class") === "2") {
-      e.target.style.backgroundColor = "pink";
-   } else if (e.target.getAttribute("class") === "3") {
-      e.target.style.backgroundColor = "green";
-   } else if (e.target.getAttribute("class") === "4") {
-      e.target.style.backgroundColor = "blue";
-   } else if (e.target.getAttribute("class") === "5") {
-      e.target.style.backgroundColor = "yellow";
-   } else {
-      e.target.style.backgroundColor = "orange";
+   switch (e.target.getAttribute("class")) {
+      case "1":
+         e.target.style.backgroundColor = "red";
+         break;
+      case "2":
+         e.target.style.backgroundColor = "pink";
+         break;
+      case "3":
+         e.target.style.backgroundColor = "green";
+         break;
+      case "4":
+         e.target.style.backgroundColor = "blue";
+         break;
+      case "5":
+         e.target.style.backgroundColor = "yellow";
+         break;
+      case "6":
+         e.target.style.backgroundColor = "orange";
+         break;
    }
+}
+
+
+
+function startNewGame() {
+   section1CardsArr.sort(function () { return 0.5 - Math.random() });
+
+   clearBoard();
+   createDiv();
+} 
+
+
+function clearBoard () {
+
+ container.innerHTML= "";  
 }
