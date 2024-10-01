@@ -12,7 +12,7 @@ function checkfit(e) {
    for (let i = 0; i < elementsArray.length; i++) {
 
       if (e.target.getAttribute("class") === lasttargetclass) {  
-         const myTimeout = setTimeout(sustainNone, 000); 
+         const myTimeout = setTimeout(sustainNone, 1000); 
         function sustainNone() {
          elementsArray[i].style.display = "none";
          WinnerCounter++;
@@ -23,7 +23,7 @@ function checkfit(e) {
         
        
       } else {
-         const myTimeout = setTimeout(sustainToGrey, 000);
+         const myTimeout = setTimeout(sustainToGrey, 1000);
          function sustainToGrey () {
          e.target.style.backgroundColor = "grey";
          elementsArray[i].style.backgroundColor = "grey";
@@ -32,22 +32,6 @@ function checkfit(e) {
    }
 
 }
-
-// function winner() {
-//    // for (let i = 0; i < section1CardsArr.length; i++) {
-  
-
-//         if (WinnerCounter === section1CardsArr.length) {
-//          alert("you won!!!");
-//         }
-//       }
-      
- 
-
-
-
-
-
 
 
 
@@ -94,3 +78,10 @@ function cardsColor(e) {
       e.target.style.backgroundColor = "orange";
    }
 }
+
+
+// document.getElementById("demo").innerHTML = section1CardsArr;  
+// function myFunction() {
+//    section1CardsArr.sort(function(){return 0.5 - Math.random()});
+//    document.getElementById("demo").innerHTML = section1CardsArr;
+//  }

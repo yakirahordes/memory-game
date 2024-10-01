@@ -15,6 +15,10 @@ function userObjToArr() {
     }
 
     localStorage.setItem("userDataArr", JSON.stringify(storageDataArr));
+    document.getElementById("button").addEventListener("click", buttonLink);
+        function buttonLink () {
+            location.href = "../pages/memorygame.html";
+        }
 }
 
 
