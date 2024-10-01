@@ -1,19 +1,39 @@
 body {
-    background-color: rgb(17, 88, 155);
-}
+    background-color:bisque;
+    }
+#contentContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    align-content: center;
 
+}
 
 h1 {
     text-align: center;
+    background-color: peru;
 }
-#container {
-    position: absolute;
-    top: 20%;
-    right: 35%;
-    background-color: grey;
-    padding: 20px;
+#my-form{
+    width:40%;
+    height: 40%;
+    font-size:2rem;
+}
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height:400px;
+    background-color: white;
+    border:10px solid palevioletred;
+
+    /* padding: 20px; */
 }
 
 #signUpButton {
     padding-left: 10px;
+    background-color: palevioletred;
+
 }
