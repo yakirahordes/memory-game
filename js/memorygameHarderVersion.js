@@ -1,3 +1,5 @@
+const harderVersionButton=document.getElementById("hard-version-btn");
+
 const container = document.getElementById("gameContainer")
 let counter = 0;
 let lasttargetclass;
@@ -14,7 +16,7 @@ function checkfit(e) {
       if (e.target.getAttribute("class") === lasttargetclass) {
          const myTimeout = setTimeout(sustainNone, 1000);
          function sustainNone() {
-            // elementsArray[i].style.display = "none";
+            elementsArray[i].style.display = "none";
             WinnerCounter++;
             if (WinnerCounter === section1CardsArr.length) {
                alert("you won!!!");
@@ -54,7 +56,7 @@ const cardstext = []
 const section1CardsArr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
 for (let i = 0; i < section1CardsArr.length; i++) {
    const element = document.createElement('div');
-   element.textContent = section1CardsArr[i];
+   // element.textContent = section1CardsArr[i];
    element.style.backgroundColor = "grey";
    container.appendChild(element);
    element.setAttribute("class", section1CardsArr[i]);

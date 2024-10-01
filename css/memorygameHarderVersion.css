@@ -54,8 +54,7 @@ div{
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-top: 20px;
-    /* border: 1px solid black; */
+    margin-top: 20px;    
 }
 button{
     background-color: palevioletred;
