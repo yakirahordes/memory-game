@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(17, 88, 155);
+}
+
+
+h1 {
+    text-align: center;
+}
+#container {
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    background-color: grey;
+    padding: 20px;
+}
+
+#logInButton {
+    padding-left: 10px;
+}

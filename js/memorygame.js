@@ -37,6 +37,7 @@ function checkfit(e) {
 
 
 //storage class and count clicks
+
 function countClick(e) {
    if (counter === 0) {
       //console.log(e.target.classList); 
@@ -50,6 +51,7 @@ function countClick(e) {
    }
 }
 //creates all the dives,gives them  class name and text content.
+
 const cardstext = []
 const section1CardsArr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
 for (let i = 0; i < section1CardsArr.length; i++) {
@@ -79,3 +81,8 @@ function cardsColor(e) {
       e.target.style.backgroundColor = "orange";
    }
 }
+// document.getElementById("demo").innerHTML = section1CardsArr;  
+// function myFunction() {
+//    section1CardsArr.sort(function(){return 0.5 - Math.random()});
+//    document.getElementById("demo").innerHTML = section1CardsArr;
+//  }

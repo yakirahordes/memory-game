@@ -27,10 +27,14 @@ function checkLocalStorage() {
     let userNameitem = storageDataArr.map(getUserName);
     let passworditem = storageDataArr.map(getPassword);
 
-    if (userNameitem.includes(userNameValues()) && passworditem.includes(passwordValues())) {
+    if (userNameitem.includes(userNameValues()) && passworditem.includes(passwordValues()) || storageDataArr === null) {
         console.log("exists");
+        document.getElementById("button").addEventListener("click", buttonLink);
+        function buttonLink () {
+            location.href = "./pages/memorygame.html";
+        }
     } else {
-        //makeLink();
+        
         console.log("doesnt exist");
         alert("user name does not exist, please sign in to continue.");
     }
@@ -45,17 +49,5 @@ function getPassword(item) {
     return item.password;
 }
 
-
-
-
-
-
-// function makeLink() {
-//     console.log(" in link");
-//     let a = document.createElement('a');
-//     console.log('a: ', a);
-//     a.href = "https://www.geeksforgeeks.org";
-//     document.getElementById("logInButton").appendChild(a);
-// }
 
 
